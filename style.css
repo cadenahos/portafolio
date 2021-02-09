@@ -1,7 +1,13 @@
-li{
-    color: red;
-}
 
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+figure {
+  margin: 0;
+}
 body{
     font-family: 'Source Sans Pro', sans-serif;
     margin: 0cm;
@@ -12,8 +18,9 @@ h3,
 h4,
 h5,
 h6{
-    font-family: 'Fjalla One', serif; 
+    font-family: 'Fjalla One', sans-serif; 
     font-weight: normal;
+    font-style: normal;
 }
 
 h1{
@@ -22,7 +29,8 @@ h1{
     letter-spacing: -.2px;
     font-style: normal;
     color: white;
-    margin: 100px 520px 70px 30px;
+    margin: 0;
+    /* margin: 100px 520px 70px 30px; */
     /* margin: top right bottom left;  como un reloj*/
     /* text-transform: uppercase;
     text-decoration: dashed; */
@@ -30,23 +38,67 @@ h1{
 h1 strong{
    color: #026fff; 
 }
+h2{
+    font-family: 'Source Sans Pro';
+   color: #026fff; 
+   font-size: 25px;
+   text-transform: uppercase;
+   margin-bottom: 40px;
+}
+.container{
+    width: 1000px;
+    margin: 0 auto;
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    height: inherit;
+    flex-wrap: inherit;
+}
 .hero{
+    display: flex;
     height: 300px;
-    background-image: url('images/hero.jpg') ;
+    /* background-image: url('images/hero.jpg') ; */
     background-color: #1b2127;
-    background-size: 500px 300px;
-    background-repeat: no-repeat;
-    background-position-x: right ;
+    /* background-size: 500px 300px;
+    background-repeat: no-repeat; */
+    /* background-position-x: right ; */
+    align-items: center;
+    justify-content: space-between;
+}
+.hero-image{
+    object-fit: cover;
 }
 .project{
     border: 5px solid gray;
     border-radius: 10px;
-    margin:10px;
     padding: 20px;
     background: white;
+    display: flex;
+    margin-bottom: 10px; 
+    justify-content: space-between;
+    align-items: center;
+}
+.project-course{
+    margin: 10px 0;
+}
+.project-date,
+.project-url{
+    margin: 10px 0;
+}
+.project strong {
+    font-family: 'Fjalla One', sans-serif;
+}
+.project-description{
+    font-size: 20px;
+}
+.project-title{
+    font-size: 30px;
+    margin-top:0;
+    margin-bottom: 10px;
 }
 .portfolio{
     background:#fafafa;
+    padding: 20px;
 }
 .project-details{
     width: 500px;
@@ -57,8 +109,131 @@ h1 strong{
 .header{
     background-color: #1b2127;
     color: white;
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    align-items: center;
 }
+.menu{
+height: inherit;
+}
+.header ol{
+    display: flex;
+    height: inherit;
+}
+.header ol li  {
+    height: inherit;
+}
+
 .header a{
+    align-items: center;
     color: white;
+    display: flex;
     text-decoration: none;
+    height: inherit;
+    padding: 0 10px;
+}
+.footer{
+    color: white;
+    display:flex;
+    align-items: center;
+    background-color: #1b2127;
+    justify-content: space-between;
+}
+
+.footer img{
+    vertical-align: middle;
+}
+.event{
+    margin: 10px;
+    width: 480px;
+    border-radius: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #f1f2f2;
+}
+.event img{
+    width: 480px;
+    height: 200px;
+    object-fit: cover;
+}
+.event-detail{
+    margin:20px;
+    margin-top: -40px;
+    background-color: white;
+    position: relative;
+    padding: 20px;
+    text-align: center;
+
+}
+.event-description{
+  text-align: left;  
+}
+.event-url{
+    border: 1px solid #026fff ;
+    padding: 5px 20px;
+    text-decoration: none;
+    color: #026fff;
+    border-radius: 5px;
+}
+.event-list-title{
+    margin-left: 20px;
+}
+.event-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+.contact{
+    background: #056fff;
+    color: white;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.social{
+}
+.social-link{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-size: 50px 50px;
+    margin: 0 10px;
+}
+.social-link.twiter{
+    background-image: url('./images/twitter.svg');
+}
+.social-link.facebook{
+    background-image: url('./images/facebook.svg');
+}
+.social-link.instagram{
+    background-image: url('./images/instagram.svg');
+}
+.social-link.github{
+    background-image: url('./images/github.svg');
+}
+.form-email input{
+    border-color: grey;
+    border-radius: 5px;
+    border-style: solid;
+    padding:5px 20px 5px 25px;
+    background-image: url('./images/envelope.svg');
+    background-size: 15px 15px;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 5px;
+
+}
+.form-email button{
+    border-color: white;
+    display: block;
+    margin-top: 10px;
+    background: transparent;
+    color: white;
+    padding: 10px 20px 10px 25px;
+    border-radius: 5px;
+    width: 100px;
+}
+.form-email h3{
+    font-family: 'Source Sans Pro', sans-serif;
 }
